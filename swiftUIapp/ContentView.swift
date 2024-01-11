@@ -47,6 +47,7 @@ struct ContentView: View {
                     Picker("Number of people", selection: $numberOfPeople){
                         ForEach(2..<100){
                             Text("\($0) people")
+                                
                         }
                     }
                     
@@ -59,6 +60,7 @@ struct ContentView: View {
                         //}
                         ForEach(0..<101){
                             Text($0, format:.percent)
+                                .foregroundColor($0 == 0 ? .red : .black)
                             
                         }
                     }
